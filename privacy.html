@@ -5,9 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SPLNOTE – Privacy Policy</title>
 <meta name="description" content="SPLNOTE privacy policy: your groups live in your iCloud, not on our servers.">
-<meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#f3f2f2" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#191817" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f3f2f2">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- TODO: add canonical and og:url when the public Pages URL or domain is confirmed. -->
@@ -27,134 +26,46 @@
 <!-- TODO: set the Apple app ID at launch, then uncomment.
 <meta name="apple-itunes-app" content="app-id=YOUR_APP_ID">
 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root { color-scheme: light dark; --bg:#f3f2f2; --surface:#fff; --ink:#201e1d; --muted:#605d5d; --line:#d9d6d5; --accent:#ae1800; --tint:#f9e9e5; --header:rgba(243,242,242,.94); }
+:root { --bg:#f3f2f2; --ink:#201e1d; --muted:#6b6765; --accent:#c8321a; --lisbon:#1f4e79; --flat:#5b6b2f; --coffee:#6b3e26; --on-field:#f3f2f2; --m:clamp(16px,2vw,32px); }
 * { box-sizing:border-box; }
-html { scroll-behavior:smooth; scroll-padding-top:95px; -webkit-text-size-adjust:100%; }
-body { margin:0; background:var(--bg); color:var(--ink); font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
-a { color:var(--accent); text-underline-offset:4px; }
-img { display:block; max-width:100%; height:auto; }
-.wrap { width:min(1180px,calc(100% - 64px)); margin-inline:auto; }
-:focus-visible { outline:3px solid var(--accent); outline-offset:5px; }
-.skip { position:fixed; top:-100px; left:16px; z-index:20; padding:12px; background:var(--surface); }
+html { -webkit-text-size-adjust:100%; }
+body { margin:0; background:var(--bg); color:var(--ink); font:400 clamp(1.0625rem,1rem + .25vw,1.1875rem)/1.55 "Figtree",-apple-system,sans-serif; -webkit-font-smoothing:antialiased; }
+a { color:inherit; text-underline-offset:4px; }
+:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
+.skip { position:fixed; left:16px; top:-80px; z-index:30; background:var(--ink); color:var(--bg); padding:12px 16px; }
 .skip:focus { top:12px; }
-header { position:sticky; top:0; z-index:10; background:var(--header); border-bottom:1px solid var(--line); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); }
-header .wrap { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
-.brand { display:inline-flex; gap:11px; align-items:center; color:var(--ink); text-decoration:none; font-size:18px; font-weight:800; letter-spacing:-.04em; }
-.brand img { width:32px; height:32px; border-radius:8px; }
-nav { display:flex; align-items:center; gap:30px; }
-nav a { color:var(--muted); text-decoration:none; font-size:14px; padding-block:12px; }
-nav a:hover,footer a:hover { text-decoration:underline; }
-.button { display:inline-flex; justify-content:center; align-items:center; min-height:44px; padding:10px 20px; background:var(--accent); color:#fff; border-radius:99px; font-size:14px; font-weight:650; text-decoration:none; }
-h1,h2,h3,p { margin-top:0; }
-h1,h2,h3 { line-height:1.1; letter-spacing:-.045em; }
-h1 { font-size:clamp(42px,4.5vw,60px); font-weight:780; margin-bottom:24px; }
-h1 span { color:var(--accent); }
-h2 { font-size:clamp(32px,3.3vw,44px); margin-bottom:22px; }
-h3 { font-size:23px; margin-bottom:12px; }
-p { margin-bottom:18px; }
-.eyebrow { font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:20px; }
-.lede { font-size:19px; color:var(--muted); max-width:44ch; }
-.hero { padding:78px 0 70px; }
-.hero-grid { display:grid; grid-template-columns:.88fr 1.12fr; align-items:center; gap:38px; }
-.hero-copy { padding-bottom:16px; }
-.store { display:inline-block; padding:14px; margin:8px 0 0 -14px; }
-.store img { height:52px; width:auto; }
-.price-note { font-size:14px; color:var(--muted); margin:1px 0 0; }
-.screens { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); align-items:center; gap:13px; margin:0; }
-.screen { min-width:0; margin:0; }
-.screen img { width:100%; border:1px solid var(--line); border-radius:23px; box-shadow:0 18px 40px -24px #201e1d66; }
-.screen.side { margin-top:52px; }
-.screen figcaption { font-size:11px; text-align:center; color:var(--muted); margin-top:13px; }
-.hero-foot { border-top:1px solid var(--line); margin-top:58px; padding-top:23px; display:flex; justify-content:space-between; gap:24px; font-size:13px; color:var(--muted); }
-section { padding:78px 0; }
-.section-head { max-width:690px; margin-bottom:36px; }
-.steps,.scenarios { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
-.steps { list-style:none; margin:0; padding:0; counter-reset:step; }
-.step { border-top:1px solid var(--line); padding-top:24px; counter-increment:step; }
-.step::before { content:'0' counter(step); display:block; font-size:13px; font-weight:650; color:var(--muted); margin-bottom:28px; font-variant-numeric:tabular-nums; }
-.step p,.scenario p,.feature p { color:var(--muted); margin-bottom:0; }
-.scenario { background:var(--surface); padding:30px; border-radius:22px; }
-.scenario .symbol { font-size:32px; display:block; margin-bottom:38px; }
-.scenario small { display:block; margin-top:28px; border-top:1px solid var(--line); padding-top:17px; font-size:13px; color:var(--muted); }
-.bento { display:grid; grid-template-columns:1.2fr 1fr; gap:20px; }
-.feature { background:var(--surface); border-radius:24px; padding:34px; }
-.feature.feature-main { grid-row:span 2; display:flex; flex-direction:column; justify-content:space-between; }
-.payment { margin:36px 0; background:var(--bg); border-radius:15px; padding:22px; font-size:15px; }
-.payment div { display:flex; justify-content:space-between; gap:18px; padding:10px 0; }
-.payment div+div { border-top:1px solid var(--line); }
-.payment b { font-variant-numeric:tabular-nums; }
-.feature-note { font-size:13px; }
-.plans { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
-.plan { background:var(--surface); padding:36px; border-radius:24px; border:1px solid var(--line); }
-.plan.premium { border-color:var(--accent); }
-.price { font-size:54px; line-height:1.2; letter-spacing:-.05em; font-weight:750; margin:25px 0 18px; font-variant-numeric:tabular-nums; }
-.price small { font-size:16px; letter-spacing:0; color:var(--muted); font-weight:400; }
-.plan p { color:var(--muted); }
-.plan p:last-child { margin-bottom:0; }
-.fine { font-size:13px; color:var(--muted); margin-top:20px; }
-.faq-wrap { max-width:800px; }
-details { border-bottom:1px solid var(--line); padding:22px 0; }
-summary { cursor:pointer; font-weight:650; padding-right:15px; }
-details p { color:var(--muted); margin:15px 0 0; }
-footer { border-top:1px solid var(--line); padding:30px 0 36px; color:var(--muted); font-size:13px; }
-.footer-row { display:flex; gap:25px; align-items:center; flex-wrap:wrap; }
-footer a { color:var(--ink); text-decoration:none; padding-block:10px; }
-.copyright { margin-left:auto; }
-.trademark { font-size:11px; max-width:780px; margin:22px 0 0; }
-.legal { max-width:740px; padding-top:68px; padding-bottom:80px; }
-.legal h1 { font-size:clamp(38px,5vw,54px); }
-.legal h2 { font-size:23px; margin:38px 0 14px; letter-spacing:-.025em; }
-.legal ul { padding-left:23px; }
-.legal li { margin:10px 0; }
+.masthead { display:flex; align-items:stretch; height:64px; }
+.mark { display:flex; align-items:center; padding:0 var(--m); background:var(--ink); color:var(--bg); font:700 28px/1 "League Spartan",sans-serif; letter-spacing:-.04em; text-decoration:none; }
+.tab { display:flex; align-items:center; gap:clamp(16px,2.2vw,36px); flex:1; padding:0 var(--m); background:var(--accent); color:#fff; }
+.tab a { text-decoration:none; font-weight:600; font-size:14px; padding:12px 0; }
+.tab a:hover, .tab a[aria-current] { text-decoration:underline; text-decoration-thickness:2px; }
+.band { display:grid; grid-template-columns:2fr 1fr 1fr 1.4fr; height:16px; }
+.band i:nth-child(1) { background:var(--lisbon); } .band i:nth-child(2) { background:var(--flat); } .band i:nth-child(3) { background:var(--coffee); } .band i:nth-child(4) { background:var(--ink); }
+.legal { max-width:68ch; padding:clamp(56px,8vw,120px) var(--m) clamp(96px,10vw,160px); }
+h1 { font:700 clamp(2.5rem,1.3rem + 4vw,4.5rem)/.92 "League Spartan",sans-serif; letter-spacing:-.04em; margin:0 0 24px; }
+h2 { font:700 clamp(1.5rem,1.2rem + 1vw,2rem)/1.1 "League Spartan",sans-serif; letter-spacing:-.02em; margin:56px 0 16px; }
+p { margin:0 0 18px; }
+ul { padding-left:22px; margin:0 0 18px; }
+li { margin:10px 0; }
 .muted { color:var(--muted); }
-@media(prefers-color-scheme:dark) {
- :root { --bg:#191817; --surface:#252322; --ink:#f4f2f1; --muted:#bcb7b4; --line:#494441; --accent:#ff907c; --tint:#382722; --header:rgba(25,24,23,.94); }
- .button { color:#29120e; }
- .screen img { border-color:#726a66; }
-}
-@media(max-width:900px) {
- .hero-grid { grid-template-columns:1fr; gap:40px; }
- .hero-copy { max-width:620px; }
- .screens { max-width:620px; width:100%; margin-inline:auto; gap:20px; }
- .screen.side { margin-top:35px; }
- .hero { padding-top:48px; }
- .hero-foot { margin-top:40px; }
- nav { gap:20px; }
-}
-@media(max-width:600px) {
- .wrap { width:calc(100% - 40px); }
- header .wrap { min-height:66px; gap:12px; }
- nav .section-link { display:none; }
- nav { gap:0; }
- .brand { font-size:16px; }
- .brand img { width:28px; height:28px; }
- .button { padding:9px 16px; }
- h1 { font-size:44px; }
- .hero { padding:42px 0 30px; }
- .hero-grid { gap:28px; }
- .lede { font-size:18px; }
- .screens { gap:8px; }
- .screen img { border-radius:13px; }
- .screen figcaption { font-size:10px; }
- .hero-foot { flex-wrap:wrap; gap:8px 20px; font-size:12px; }
- section { padding:50px 0; }
- .steps,.scenarios,.bento,.plans { grid-template-columns:minmax(0,1fr); }
- .step { padding-bottom:10px; }
- .step::before { margin-bottom:16px; }
- .scenario .symbol { margin-bottom:22px; }
- .feature,.plan,.scenario { padding:26px; }
- .feature.feature-main { grid-row:auto; }
- .copyright { width:100%; margin:0; }
- .legal { padding-top:42px; }
-}
-@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+footer { background:var(--ink); color:var(--on-field); padding:48px var(--m) 32px; font-size:14px; }
+.footer-row { display:flex; flex-wrap:wrap; gap:8px 28px; align-items:center; }
+footer a { text-decoration:none; padding:8px 0; }
+footer a:hover { text-decoration:underline; }
+.copyright { margin-left:auto; }
+.trademark { color:#bdb8b5; max-width:64ch; margin:24px 0 0; }
+@media (max-width:760px) { .tab { display:none; } .masthead { justify-content:space-between; } .copyright { width:100%; margin:0; } }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header><div class="wrap"><a class="brand" href="index.html" aria-label="SPLNOTE home"><img src="favicon.png" width="32" height="32" alt="">SPLNOTE</a><nav aria-label="Main navigation"><a class="section-link" href="index.html#features">Features</a><a class="section-link" href="index.html#pricing">Pricing</a><a class="section-link" href="index.html#faq">FAQ</a><a class="button" href="index.html#download">Get SPLNOTE</a></nav></div></header>
-<main id="main" class="wrap legal">
+<div class="masthead"><a class="mark" href="index.html" aria-label="SPLNOTE home">splnote</a><nav class="tab" aria-label="Main navigation"><a href="index.html#groups">Groups</a><a href="index.html#pricing">Pricing</a><a href="support.html">Support</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a></nav></div>
+<div class="band" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<main id="main" class="legal">
 <h1>SPLNOTE Privacy Policy</h1>
 <p class="muted">Effective date: <!-- TODO: set on publish --> October 2026</p>
 
@@ -185,6 +96,6 @@ footer a { color:var(--ink); text-decoration:none; padding-block:10px; }
 <p>If this policy changes, the new version will be published on this page with a new effective date.</p>
 <p>Contact: the developer through Send Beta Feedback in TestFlight</p>
 </main>
-<footer><div class="wrap"><div class="footer-row"><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="terms.html">Terms</a><span class="copyright">© 2026 SPLNOTE · Made for iPhone</span></div><p class="trademark">Apple, the Apple logo, iPhone, and iCloud are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p></div></footer>
+<footer><div class="footer-row"><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="terms.html">Terms</a><span class="copyright">© 2026 SPLNOTE · Made for iPhone</span></div><p class="trademark">Apple, the Apple logo, iPhone, and iCloud are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p></footer>
 </body>
 </html>
